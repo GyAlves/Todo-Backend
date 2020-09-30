@@ -47,3 +47,28 @@ OBS: Preste atenção ao que está escrito em "main" altere para "main": ""src/s
 
 ### Alterar o estado isDone do TO-DO
 
+- Buscamos o id do todo que pretendemos alterar através da URL
+
+- Com esse ID buscamos seu index (sua posição) dentro do array de todos 
+
+- Caso não encontremos nenhum retornamos um erro 
+
+- Buscamos o isDone do body do insomnia 
+
+- Setamos o novo estado do todo de acordo com o recebido 
+
+- Buscamos o todo alteado pelo seu ID
+
+- Retornamos o todo
+
+## Deletando os todos
+- Buscamos o id do todo que pretendemos alterar através da URL
+
+- Com esse ID buscamos seu index (sua posição) dentro do array de todos 
+
+- Caso não encontremos nenhum retornamos um erro 
+
+- Retiro o todo de dentro do array 
+
+- Retorno uma mensagem de sucesso
+
