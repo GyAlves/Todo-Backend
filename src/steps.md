@@ -18,3 +18,32 @@ OBS: Preste atenção ao que está escrito em "main" altere para "main": ""src/s
 - Permitimos que a aplicação entenda o Json
 - usamos essa variável para chamar uma porta onde nosso servidor estará escutando ()
 
+## Configurando rotas 
+- Dentro da pasta src criaremos outra pasta chamada routes, esta pasta ira armazenar as rotas usadas em nossa aplicação
+- Criamos um arquivo todo.routes.js
+- Iremos importar o método Router de dentro do express, ele permite usarmos os métodos HTPP, exemplo: GET, POST, PUT, DELETE
+- Instaciamos uma variável 
+- Criamos uma rota get com um caminho todo que por enquanto irá apenas retornar algo em nosso console
+-Por fim não se esqueça de exporta essa rota.
+- Agora dentro de server.js importamos esse rota e a deixamos disponível para ser usada
+
+- Testamos essa rota criando uma nova requisição no Insomnia 
+
+## Criando rotas 
+### Criando método Get 
+- Iremos primeiro criar o método que retornará todos os nossos todos 
+- Primeiro criamos um array de nome todos onde serão armazenados 
+- Depois dentro do método get retornaremos todos os todos dentro do aray
+
+### Criando método POST
+- Adicionamos a lib uuidv4 que irá gerar os nossos IDs
+- Criamos uma nota rota post 
+- Buscamos os dados do insomnia usando request.body
+- Criamos o ID usando o uuid 
+- Realizamos uma verificamos sobre a veracidade daquele Id
+- Criamos um objeto unindo os dados recebidos pelo body e o id 
+- Adiconamos esse objeto ao array 
+- Retornamos o objeto
+
+### Alterar o estado isDone do TO-DO
+
