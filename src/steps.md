@@ -55,7 +55,7 @@ OBS: Preste atenção ao que está escrito em "main" altere para "main": ""src/s
 
 - Buscamos o isDone do body do insomnia 
 
-- Setamos o novo estado do todo de acordo com o recebido 
+- Setamos o novo estado do todo de acordo com o recebidos 
 
 - Buscamos o todo alteado pelo seu ID
 
