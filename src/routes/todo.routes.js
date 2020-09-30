@@ -23,4 +23,33 @@ todoRoutes.post('/todos',(request, response) => {
     return response.json(todo)
 })
 
+todoRoutes.put('/todos/:id',(request, response) => {
+    const { id } = request.params;
+
+    const IdIndex = todos.findIndex(item => item.id === id);
+
+    if(IdIndex < 0){
+       return response.status(400).json({error: 'To-Do not found'})
+    }
+
+    const {isDone} = request.body;
+    todos[IdIndex].isDone = isDone;
+
+    const findTodo = todos.find(todo => todo.id === id);
+    return response.json(findTodo);
+})
+
+todoRoutes.delete("/todos/:id", (request, response) => {
+    const { id } = request.params;
+
+    const todoIndex = todos.findIndex(item => item.id === id);
+
+    if(todoIndex < 0){
+       return response.status(400).json({error: 'To-Do not found'})
+    }
+
+    todos.splice(todoIndex,1);
+   return response.json({message: 'Todo apagado'})
+})
+
 module.exports = todoRoutes;
